@@ -1,0 +1,36 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.card-dados-header{
+    
+    text-align: center;
+}
+
+.card-body{
+    border-radius: 5px;
+    background: #e2e2e2;
+    width: 200px;
+    height: 260px;
+    margin: 5px;
+    border:1px solid #575656;
+    
+}
+.card-dados-label {
+    display:flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.card-dados-nome {
+    display:flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.bold {
+    font-weight: 700;
+}
