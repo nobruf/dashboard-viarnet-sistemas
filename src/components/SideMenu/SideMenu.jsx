@@ -20,8 +20,8 @@ const SideMenu = () => {
         <MenuItem><Link to="instaladores">Instaladores</Link></MenuItem>
       </SubMenu>
       <SubMenu title="Telefonia Fixa" icon={<TiPhoneOutline/>}>
-        <MenuItem><Link to="realizadas">Realizadas</Link></MenuItem>
-        <MenuItem><Link to="instaladores">Instaladores</Link></MenuItem>
+        <MenuItem><Link to="fixo-disponives">Numeros Disponiveis</Link></MenuItem>
+        <MenuItem><Link to="instaladores">Portabilidades</Link></MenuItem>
       </SubMenu>
       <SubMenu title="Telefonia Movel" icon={<TiDevicePhone/>}>
         <MenuItem><Link to="realizadas">Realizadas</Link></MenuItem>
