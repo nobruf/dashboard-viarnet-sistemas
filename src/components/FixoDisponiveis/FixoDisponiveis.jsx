@@ -9,12 +9,15 @@ function FixoDisponiveis() {
 
    const [cidade, setCidade] = React.useState('Escolha uma Cidade!');
    const [atual_cidade, setAtualCidade] = React.useState([]);
-   
+   const [loading , setLoading] = React.useState(false)
    async function getCidade(cidade){
-
+    if(cidade != "Escolha uma Cidade!"){
+    setLoading(true)
     await axios.get(`http://localhost:3333/fixo-disponiveis/${cidade}`).then((city)=>{
         setAtualCidade(city.data.numeros_disponiveis)
-    });       
+        setLoading(false)
+    });
+  }       
     
     }
     
@@ -24,6 +27,7 @@ function FixoDisponiveis() {
         setCidade(event.target.value);
     };
 
+ 
   return (
       <div className='disponiveis-body'>
         <div>Fixo Disponiveis</div>
@@ -42,7 +46,8 @@ function FixoDisponiveis() {
           <MenuItem value={"CEU AZUL"}>CEU AZUL</MenuItem>
         </Select>
       </FormControl>
-        <NumberCard data={atual_cidade} />
+        {loading && <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
+        {!loading && <NumberCard data={atual_cidade} />}
       </div>
   )
 }
