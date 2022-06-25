@@ -7,7 +7,7 @@ import "./FixoDisponiveis.css"
 
 function FixoDisponiveis() {
 
-   const [cidade, setCidade] = React.useState('MEDIANEIRA');
+   const [cidade, setCidade] = React.useState('Escolha uma Cidade!');
    const [atual_cidade, setAtualCidade] = React.useState([]);
    
    async function getCidade(cidade){
@@ -36,6 +36,7 @@ function FixoDisponiveis() {
           label="Cidade"
           onChange={handleChange}
         >
+          <MenuItem value={"Escolha uma Cidade!"}>Escolha uma Cidade!</MenuItem>
           <MenuItem value={"MEDIANEIRA"}>MEDIANEIRA</MenuItem>
           <MenuItem value={"MATELANDIA"}>MATELANDIA</MenuItem>
           <MenuItem value={"CEU AZUL"}>CEU AZUL</MenuItem>

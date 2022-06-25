@@ -5,7 +5,7 @@ import { DownOutlined } from '@ant-design/icons';
 
 const columns = [
     {
-        title: 'Tecnico',
+        title: 'TECNICO',
         dataIndex: 'tecnico',
         filters: [
           {
@@ -20,13 +20,13 @@ const columns = [
         onFilter: (value, record) => record.tecnico.indexOf(value) === 0,
       },
   {
-    title: 'Data',
-    dataIndex: 'data',
+    title: 'DATA',
+    dataIndex: 'createdAt',
     sorter: (a, b) => a.data - b.data,
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
+    title: 'CLIENTE',
+    dataIndex: 'nomecliente',
     filters: [
       {
         text: 'London',
@@ -38,23 +38,7 @@ const columns = [
       },
     ],
     onFilter: (value, record) => record.address.indexOf(value) === 0,
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    sorter: true,
-    render: () => (
-      <Space size="middle">
-        <a>Delete</a>
-        <a>
-          <Space>
-            More actions
-            <DownOutlined />
-          </Space>
-        </a>
-      </Space>
-    ),
-  },
+  }
 ];
 let data =[]
 /* 
@@ -81,8 +65,7 @@ const defaultExpandable = {
 };
 
 const Tabela = (instalacoes) => {
-  data=instalacoes.data;
-  console.log(data)
+  data = instalacoes.data;
   const [bordered, setBordered] = useState(true);
   const [loading, setLoading] = useState(false);
   const [size, setSize] = useState('large');
